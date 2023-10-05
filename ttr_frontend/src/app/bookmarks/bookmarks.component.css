@@ -1,41 +1,9 @@
-.profile_container{
+.bookmarks_container{
     padding-top: 1.5rem;
     width: 75rem;
     margin: auto;
 }
-.username{
-    font-size: 1.8rem;
-    font-weight: 600;
-    opacity: 80%;
-    margin-right: 1rem;
-}
-.follow_btn{
-    padding-left: 1.3rem;
-    padding-right: 1.5rem;
-    height: 2rem;
-    border: none;
-    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-    background-color: rgb(8, 113, 233);
-    border-radius: 0.3rem;
-    color: white;
-    margin-left: 8rem;
-    transition: all .2s linear;
-    display: flex;
-    align-items: center;
-}
-.follow_btn:hover{
-    opacity: 70%;
-}
-.follow_btn_text{
-    margin-left: .3rem;
-}
-.follow_btn_icon{
-    font-size: 1.3rem;
-    margin-top: .3rem;
-    min-width: 1.3rem;
-    min-height: 1.3rem;
-}
-.profile_body{
+.bookmarks_body{
     display: flex;
     justify-content: space-between;
 }
@@ -251,11 +219,8 @@
     .post_img{
         width: 39rem;
     }
-    .profile_container{
+    .bookmarks_container{
         width: 60rem;
-    }
-    .follow_btn{
-        margin-left: 1rem;
     }
 }
 
@@ -263,7 +228,7 @@
     .timeline {
         width: 30rem;
     }
-    .profile_container{
+    .bookmarks_container{
         width: 40rem;
     }
     .post_img{
@@ -276,13 +241,10 @@
 }
 
 @media only screen and (max-width: 45rem) {
-    .profile_container{
+    .bookmarks_container{
         width: 25rem;
     }
-    .follow_btn{
-        margin-top: 1rem;
-    }
-    .profile_body{
+    .bookmarks_body{
         justify-content: flex-start;
         flex-direction: column;
     }
