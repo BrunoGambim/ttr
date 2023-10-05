@@ -8,13 +8,15 @@ import { NavbarComponent } from './header/navbar/navbar.component';
 import {MatIconModule} from '@angular/material/icon';
 import { ProfileComponent } from './profile/profile.component';
 import { NavbarFooterComponent } from './footer/navbar/navbar.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
     ProfileComponent,
-    NavbarFooterComponent
+    NavbarFooterComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
