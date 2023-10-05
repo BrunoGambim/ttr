@@ -1,0 +1,74 @@
+.navbar_container {
+    height: 4rem;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    background-color: white;
+}
+.logo_container {
+    width: 15rem;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+}
+.nav_title{
+    font-size: 1.4rem;
+    font-weight: 800;
+    opacity: 75%;
+}
+.nav_buttons_container {
+    width: 40rem;
+    display: flex;
+    justify-content: center;
+}
+.nav_button{
+    margin-left: 1.5rem;
+    padding: 1.5rem;
+    background-color: white;
+    opacity: 60%;
+    border: none;
+    font-size: 1rem;
+    transition: all .2s linear;
+} 
+.nav_button:hover{
+    opacity: 90%;
+    color: rgb(8, 113, 233);
+    box-shadow: 0rem -0.2rem 0rem rgb(8, 113, 233) inset;
+}
+.selected_button{
+    opacity: 90%;
+    color: rgb(8, 113, 233);
+    box-shadow: 0rem -0.2rem 0rem rgb(8, 113, 233) inset;
+}
+.profile_button_container {
+    width: 15rem;
+    display: flex;
+    justify-content: center;
+}
+.profile_button{
+    border: none;
+    display: flex;
+    align-items: center;
+    background: white;
+}
+.profile_button_img{
+    width: 2.5rem;
+    height: 2.5rem;
+    padding: 0rem;
+    display: block;
+    border-radius: 0.3rem;
+}
+.profile_button_username{
+    margin-left: 0.8rem;
+    font-size: 1rem;
+    font-weight: 600;
+}
+.dropdown_icon{
+    margin-left:.5rem;
+}
+@media only screen and (max-width: 45rem) {
+    .nav_buttons_container{
+        display: none;
+    }
+}
