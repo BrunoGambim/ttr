@@ -1,9 +1,9 @@
-.bookmarks_container{
+.explore_container{
     padding-top: 1.5rem;
     width: 75rem;
     margin: auto;
 }
-.bookmarks_body{
+.explore_body{
     display: flex;
     justify-content: space-between;
 }
@@ -40,6 +40,42 @@
 .timeline{
     width: 45rem;
     margin-left: 1.5rem;
+}
+.search_container{
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    background-color: white;
+    border-radius: 1rem;
+    margin-bottom: 1.5rem;
+    padding: 1rem 1.5rem 1rem 1.5rem;
+    display: flex;
+}
+.search_icon{
+    margin-top: .2rem;
+    font-size: 1.3rem;
+}
+.search_input_text{
+    margin-left: 1.5rem;
+    width: 100%;
+    border: none;
+    font-size: 1rem;
+    transition: all .2s linear;
+    margin-right: 1.5rem;
+}
+.search_btn{
+    padding-left: 1.3rem;
+    padding-right: 1.5rem;
+    height: 2rem;
+    border: none;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    background-color: rgb(8, 113, 233);
+    border-radius: 0.3rem;
+    color: white;
+    transition: all .2s linear;
+    display: flex;
+    align-items: center;
+}
+.search_btn:hover{
+    opacity: 70%;
 }
 .retweet_flag{
     display: flex;
@@ -219,7 +255,7 @@
     .post_img{
         width: 39rem;
     }
-    .bookmarks_container{
+    .explore_container{
         width: 60rem;
     }
 }
@@ -228,7 +264,7 @@
     .timeline {
         width: 30rem;
     }
-    .bookmarks_container{
+    .explore_container{
         width: 40rem;
     }
     .post_img{
@@ -241,10 +277,10 @@
 }
 
 @media only screen and (max-width: 45rem) {
-    .bookmarks_container{
+    .explore_container{
         width: 25rem;
     }
-    .bookmarks_body{
+    .explore_body{
         justify-content: flex-start;
         flex-direction: column;
     }
