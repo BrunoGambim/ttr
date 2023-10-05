@@ -10,6 +10,7 @@ import { ProfileComponent } from './profile/profile.component';
 import { NavbarFooterComponent } from './footer/navbar/navbar.component';
 import { HomeComponent } from './home/home.component';
 import { BookmarksComponent } from './bookmarks/bookmarks.component';
+import { ExploreComponent } from './explore/explore.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { BookmarksComponent } from './bookmarks/bookmarks.component';
     ProfileComponent,
     NavbarFooterComponent,
     HomeComponent,
-    BookmarksComponent
+    BookmarksComponent,
+    ExploreComponent
   ],
   imports: [
     BrowserModule,
