@@ -9,6 +9,7 @@ import {MatIconModule} from '@angular/material/icon';
 import { ProfileComponent } from './profile/profile.component';
 import { NavbarFooterComponent } from './footer/navbar/navbar.component';
 import { HomeComponent } from './home/home.component';
+import { BookmarksComponent } from './bookmarks/bookmarks.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { HomeComponent } from './home/home.component';
     NavbarComponent,
     ProfileComponent,
     NavbarFooterComponent,
-    HomeComponent
+    HomeComponent,
+    BookmarksComponent
   ],
   imports: [
     BrowserModule,
