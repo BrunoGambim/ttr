@@ -10,10 +10,16 @@
             <div class="tweet_something_footer">
                 <div class="tweet_something_opts">
                     <button class="tweet_something_img_file"> <mat-icon>image</mat-icon> </button>
-                    <button class="tweet_something_who_can_reply"> <mat-icon>public</mat-icon> Everyone can reply </button>
+                    <button class="tweet_something_who_can_reply" (click)="changeMenuVisibility($event)"> <mat-icon>public</mat-icon> Everyone can reply </button>
                 </div>
                 <button class="tweet_something_btn"> Tweet </button>
             </div>
+        </div>
+        <div id="who_can_reply_menu" class="who_can_reply_menu_container hidden">
+            <span class="who_can_reply_title">Who can reply?</span>
+            <span class="who_can_reply_text">Choose who can reply to this Tweet.</span>
+            <button class="who_can_reply_button"> <mat-icon>public</mat-icon> Everyone </button>
+            <button class="who_can_reply_button"> <mat-icon>people</mat-icon> People you follow </button>
         </div>
         <div class="retweet_flag">
             <mat-icon class="retweet_flag_icon">autorenew</mat-icon>
