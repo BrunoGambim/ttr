@@ -11,6 +11,11 @@ import { NavbarFooterComponent } from './footer/navbar/navbar.component';
 import { HomeComponent } from './home/home.component';
 import { BookmarksComponent } from './bookmarks/bookmarks.component';
 import { ExploreComponent } from './explore/explore.component';
+import { MatMenuModule } from '@angular/material/menu';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatDialogModule } from '@angular/material/dialog';
+import { LoginDialogComponent } from './login-dialog/login-dialog.component';
+
 
 @NgModule({
   declarations: [
@@ -20,12 +25,16 @@ import { ExploreComponent } from './explore/explore.component';
     NavbarFooterComponent,
     HomeComponent,
     BookmarksComponent,
-    ExploreComponent
+    ExploreComponent,
+    LoginDialogComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    MatIconModule
+    MatIconModule,
+    MatMenuModule,
+    BrowserAnimationsModule,
+    MatDialogModule
   ],
   providers: [],
   bootstrap: [AppComponent]

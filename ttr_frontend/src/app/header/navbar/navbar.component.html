@@ -8,10 +8,18 @@
         <button class="nav_button"> Bookmarks </button>
     </div>
     <div class="profile_button_container">
-        <button class="profile_button">
+        <button class="profile_button" (click)="changeMenuVisibility($event)" *ngIf="false">
             <img class="profile_button_img" src="https://i.natgeofe.com/n/548467d8-c5f1-4551-9f58-6817a8d2c45e/NationalGeographic_2572187_square.jpg">
             <span class="profile_button_username">Joao Silva</span>
             <mat-icon class="dropdown_icon">arrow_drop_down</mat-icon>
         </button>
+        <button class="login_button" *ngIf="true" (click)="openLoginDialog()"> <mat-icon>login</mat-icon> <span> Login </span> </button>
+    </div>
+    <div class="profile_menu hidden" id="profile_menu">
+        <button> <mat-icon>account_circle</mat-icon> My Profile </button>
+        <button> <mat-icon>group</mat-icon> Group Chat </button>
+        <button> <mat-icon>settings</mat-icon> Settings </button>
+        <div class="hr"></div>
+        <button class="logout_btn"> <mat-icon>logout</mat-icon> Logout </button>
     </div>
 </nav>    
