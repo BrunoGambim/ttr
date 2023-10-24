@@ -75,7 +75,6 @@
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 .profile_header_img{
-    background-image: url("https://i.natgeofe.com/n/548467d8-c5f1-4551-9f58-6817a8d2c45e/NationalGeographic_2572187_square.jpg");
     background-size: 11rem 11rem;
     width: 11rem;
     height: 11rem;
@@ -95,7 +94,8 @@
     display: block;
     width: 100%;
     height: 10rem;
-    background-image: url("https://templates.iqonic.design/sofbox-admin/sofbox-dashboard-laravel/public/assets/images/page-img/profile-bg.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
 }
 .profile_header_img button, .profile_header_bg_img button{
     margin-top: 1rem;

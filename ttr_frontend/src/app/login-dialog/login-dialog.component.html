@@ -6,27 +6,37 @@
         <button> Login </button>
         <button type='button' (click)="goToSignUpFirstStep()"> Sign Up </button>
     </form>
-    <form class="signup_dialog_form" *ngIf="step != LOGIN">
+    <form class="signup_dialog_form" *ngIf="step != LOGIN" [formGroup]="signUpForm">
         <div class="signup_dialog_form_container" *ngIf="step == SIGNUP_FIRST_STEP">
             <div class="dialog_title_container"><span class="dialog_title">Sign Up</span></div>
-            <input class="dialog_text_input" type="text" placeholder="Name">
-            <input class="dialog_text_input" type="text" placeholder="Email">
-            <input class="dialog_text_input" type="password" placeholder="Password">
-            <input class="dialog_text_input" type="password" placeholder="Confirm Password">
+            <input matInput class="dialog_text_input" type="text" placeholder="Name" name="name" formControlName="name">
+            <input matInput class="dialog_text_input" type="text" placeholder="Email" name="email" formControlName="email">
+            <input matInput class="dialog_text_input" type="password" placeholder="Password" name="password" formControlName="password">
+            <input matInput class="dialog_text_input" type="password" placeholder="Confirm Password" name="confirmPassword" formControlName="confirmPassword">
             <button type='button' (click)="goToSignUpSecondStep()"> Next </button>
         </div>
         <div class="signup_dialog_form_container" *ngIf="step == SIGNUP_SECOND_STEP">
             <div class="dialog_title_container"><span class="dialog_title">Sign Up</span></div>
-            <textarea class="dialog_text_input dialog_textarea_input" type="text" placeholder="Biography "></textarea>
+            <textarea class="dialog_text_input dialog_textarea_input" type="text" placeholder="Biography" name="biography" formControlName="biography"></textarea>
             <button type='button' (click)="goToSignUpThirdStep()"> Next </button>
         </div>
         <div class="signup_dialog_form_container" *ngIf="step == SIGNUP_THIRD_STEP">
-            <input #bgInput hidden="true" type="file"/>
-            <div class="profile_header_bg_img"><button class="add_image_btn add_image_bg_btn" type='button' (click)="bgInput.click()"><mat-icon>add_a_photo</mat-icon></button></div>
+            <input #bgInput hidden="true" type="file" (change)="onBGImageSelected($event)"/>
+            <input type="hidden" name="bgImageFile" formControlName="bgImageFile"/>
+            <div class="profile_header_bg_img" [ngStyle]="{'background-image': (bgImageURL) ? 'url(' + bgImageURL + ')' : ''}">
+                <button class="add_image_btn add_image_bg_btn" type='button' (click)="bgInput.click()">
+                    <mat-icon>add_a_photo</mat-icon>
+                </button>
+            </div>
             <div class="profile_header">
                 <div class="profile_header_img_container">
-                    <input #profileInput hidden="true" type="file"/>
-                    <div class="profile_header_img"> <button class="add_image_btn add_image_profile_btn" type='button' (click)="profileInput.click()"><mat-icon>add_a_photo</mat-icon></button> </div>
+                    <input #profileInput hidden="true" type="file" (change)="onProfileImageSelected($event)"/>
+                    <input type="hidden" name="profileImageFile" formControlName="profileImageFile"/>
+                    <div class="profile_header_img" [ngStyle]="{'background-image': (profileImageURL) ? 'url(' + profileImageURL + ')' : ''}">
+                        <button class="add_image_btn add_image_profile_btn" type='button' (click)="profileInput.click()">
+                            <mat-icon>add_a_photo</mat-icon>
+                        </button> 
+                    </div>
                 </div>
                 <div class="profile_header_body">
                     <div class="profile_header_body_header">
